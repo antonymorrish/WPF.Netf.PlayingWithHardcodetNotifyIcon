@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="WPF.Netf.PlayingWithHardcodetNotifyIcon.MyTaskbarToolTip"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF.Netf.PlayingWithHardcodetNotifyIcon"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="200">
+    <Grid Width="200" Height="100" Background="AntiqueWhite">
+        <StackPanel Orientation="Horizontal">
+            <StackPanel MaxHeight="100" MaxWidth="100">
+                <Image Source="face.ico" Stretch="Fill"></Image>
+            </StackPanel>
+            <StackPanel MaxHeight="100" MaxWidth="100">
+                <TextBlock TextWrapping="Wrap">Hello here is a message  tool tip loaded from a UserControl</TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF.Netf.PlayingWithHardcodetNotifyIcon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        xmlns:local="clr-namespace:WPF.Netf.PlayingWithHardcodetNotifyIcon"
+        
+        mc:Ignorable="d"
+        x:Name="mainWindow"
+        Title="WPF NotifyIcon Test" 
+        Height="225" Width="400"
+        ShowInTaskbar="False" Closed="Window_Closed"
+        >
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <!-- Icon ref is ico file added to Project and build option set as 'Embedded Resource' -->
+        <tb:TaskbarIcon x:Name="taskbarIcon" ToolTipText="Hello World" IconSource="face.ico">
+        </tb:TaskbarIcon>
+        <StackPanel>
+            <TextBlock TextWrapping="Wrap">Test trying out WPF Notify Icon to achieve minimise to tray application interaction</TextBlock>
+            <Label>https://www.nuget.org/packages/Hardcodet.NotifyIcon.Wpf/</Label>
+            <Button Margin="10" x:Name="buttonMinimiseToTray" Click="buttonMinimiseToTray_Click">Minimise to Tray</Button>
+            <Button Margin="10" x:Name="buttonBalloonMessage" Click="buttonBalloonMessage_Click">Do Balloon Message</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
